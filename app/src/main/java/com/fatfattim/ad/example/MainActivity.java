@@ -23,7 +23,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        findViewById(R.id.load_rewards_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RewardActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
         initAd();
     }
 
@@ -95,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
     // [END request_new_interstitial]
 
     private void beginSecondActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Log.d(TAG, "beginSecondActivity: ");
     }
 
     // [START add_lifecycle_methods]
