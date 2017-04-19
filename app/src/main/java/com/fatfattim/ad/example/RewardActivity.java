@@ -1,8 +1,10 @@
 package com.fatfattim.ad.example;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -17,6 +19,8 @@ public class RewardActivity extends AppCompatActivity implements RewardedVideoAd
     private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/5224354917";
     private static final String APP_ID = "ca-app-pub-3940256099942544~3347511713";
     private RewardedVideoAd mAd;
+    private TextView mCoinCountText;
+    private int mCoinCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,16 @@ public class RewardActivity extends AppCompatActivity implements RewardedVideoAd
                 }
             }
         });
+
+        mCoinCountText = ((TextView) findViewById(R.id.coin_count_text));
+        setCoinText(mCoinCount);
         initAd();
+    }
+
+    private void setCoinText(int count) {
+        Resources res = getResources();
+        String text = res.getString(R.string.coin_text, count);
+        mCoinCountText.setText(text);
     }
 
     private void initAd() {
@@ -50,6 +63,8 @@ public class RewardActivity extends AppCompatActivity implements RewardedVideoAd
     public void onRewarded(RewardItem reward) {
         Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " +
                 reward.getAmount(), Toast.LENGTH_SHORT).show();
+        mCoinCount = mCoinCount + reward.getAmount();
+        setCoinText(mCoinCount);
     }
 
     @Override
