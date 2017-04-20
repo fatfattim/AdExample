@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
+
+        findViewById(R.id.load_native_advanced_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NativeAdvancedActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
         initAd();
     }
 

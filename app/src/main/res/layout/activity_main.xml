@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/load_interstitial_button"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/interstitial_label"/>
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/load_rewards_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/load_interstitial_button"
-        android:text="@string/rewarded_label"/>
+        <Button
+            android:id="@+id/load_interstitial_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interstitial_label"/>
 
-    <Button
-        android:id="@+id/load_native_express_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/load_rewards_button"
-        android:text="@string/native_express_label"/>
+        <Button
+            android:id="@+id/load_rewards_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rewarded_label"/>
+
+        <Button
+            android:id="@+id/load_native_express_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/native_express_label"/>
+
+        <Button
+            android:id="@+id/load_native_advanced_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/native_advanced_label"/>
+
+    </LinearLayout>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
-</RelativeLayout><!-- [END define_ad_layout] -->
+</FrameLayout><!-- [END define_ad_layout] -->
 

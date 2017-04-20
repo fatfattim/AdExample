@@ -22,6 +22,7 @@
 
         <activity android:name=".RewardActivity" />
         <activity android:name=".NativeExpressActivity" />
+        <activity android:name=".NativeAdvancedActivity" />
     </application>
 
 </manifest>
