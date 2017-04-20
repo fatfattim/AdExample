@@ -20,6 +20,14 @@
         android:layout_below="@+id/load_interstitial_button"
         android:text="@string/rewarded_label"/>
 
+    <Button
+        android:id="@+id/load_native_express_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/load_rewards_button"
+        android:text="@string/native_express_label"/>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"

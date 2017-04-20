@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
+
+        findViewById(R.id.load_native_express_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NativeExpressActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
         initAd();
     }
 
@@ -121,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         if (mAdView != null) {
             mAdView.resume();
         }
-        if (!mInterstitialAd.isLoaded()) {
+        if (mInterstitialAd != null && !mInterstitialAd.isLoaded()) {
             requestNewInterstitial();
         }
     }

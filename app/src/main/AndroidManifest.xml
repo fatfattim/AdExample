@@ -21,6 +21,7 @@
         </activity>
 
         <activity android:name=".RewardActivity" />
+        <activity android:name=".NativeExpressActivity" />
     </application>
 
 </manifest>
