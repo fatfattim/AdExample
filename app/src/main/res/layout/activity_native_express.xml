@@ -10,6 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         ads:adSize="320x300"
-        ads:adUnitId="ca-app-pub-3940256099942544/2177258514">
+        ads:adUnitId="@string/test_native_express_ad_unit_id">
     </com.google.android.gms.ads.NativeExpressAdView>
 </RelativeLayout>

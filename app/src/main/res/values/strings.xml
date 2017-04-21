@@ -5,6 +5,12 @@
     <string name="native_express_label">Native express</string>
     <string name="native_advanced_label">Native advanced</string>
     <string name="coin_text">Coin: %1$d</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+
+
+    <!--Below ad-unit-id are come from https://github.com/googleads/googleads-mobile-android-examples-->
+    <string name="test_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="test_native_express_ad_unit_id">ca-app-pub-3940256099942544/2177258514</string>
+    <string name="test_native_advanced_ad_unit_id">ca-app-pub-3940256099942544/2247696110</string>
 </resources>

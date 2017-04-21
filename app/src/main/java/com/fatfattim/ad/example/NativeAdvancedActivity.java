@@ -30,7 +30,6 @@ import java.util.Locale;
 
 public class NativeAdvancedActivity extends AppCompatActivity {
 
-    private static final String ADMOB_AD_UNIT_ID = "ca-app-pub-3940256099942544/2247696110";
     private static final String ADMOB_APP_ID = "ca-app-pub-3940256099942544~3347511713";
 
     private Button mRefresh;
@@ -209,7 +208,7 @@ public class NativeAdvancedActivity extends AppCompatActivity {
 
         mRefresh.setEnabled(false);
 
-        AdLoader.Builder builder = new AdLoader.Builder(this, ADMOB_AD_UNIT_ID);
+        AdLoader.Builder builder = new AdLoader.Builder(this, getString(R.string.test_native_advanced_ad_unit_id));
 
         if (requestAppInstallAds) {
             builder.forAppInstallAd(new NativeAppInstallAd.OnAppInstallAdLoadedListener() {

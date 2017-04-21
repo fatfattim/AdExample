@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"/>
+        ads:adUnitId="@string/test_banner_ad_unit_id"/>
 
 </FrameLayout><!-- [END define_ad_layout] -->
 
