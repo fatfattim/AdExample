@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.formats.MediaView;
@@ -30,8 +29,6 @@ import java.util.Locale;
 
 public class NativeAdvancedActivity extends AppCompatActivity {
 
-    private static final String ADMOB_APP_ID = "ca-app-pub-3940256099942544~3347511713";
-
     private Button mRefresh;
     private CheckBox mRequestAppInstallAds;
     private CheckBox mRequestContentAds;
@@ -42,9 +39,6 @@ public class NativeAdvancedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_native_advanced);
-
-        // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, ADMOB_APP_ID);
 
         mRefresh = (Button) findViewById(R.id.btn_refresh);
         mRequestAppInstallAds = (CheckBox) findViewById(R.id.cb_appinstall);

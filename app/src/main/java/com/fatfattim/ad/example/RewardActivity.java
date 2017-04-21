@@ -16,8 +16,6 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 public class RewardActivity extends AppCompatActivity implements RewardedVideoAdListener {
     private final String TAG = getClass().getSimpleName();
-    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/5224354917";
-    private static final String APP_ID = "ca-app-pub-3940256099942544~3347511713";
     private RewardedVideoAd mAd;
     private TextView mCoinCountText;
     private int mCoinCount = 0;
@@ -47,7 +45,7 @@ public class RewardActivity extends AppCompatActivity implements RewardedVideoAd
     }
 
     private void initAd() {
-        MobileAds.initialize(this, APP_ID);
+        //MobileAds.initialize(this, APP_ID);
         mAd = MobileAds.getRewardedVideoAdInstance(this);
         mAd.setRewardedVideoAdListener(this);
         loadRewardedVideoAd();
@@ -55,7 +53,7 @@ public class RewardActivity extends AppCompatActivity implements RewardedVideoAd
 
     private void loadRewardedVideoAd() {
         if (!mAd.isLoaded()) {
-            mAd.loadAd(AD_UNIT_ID, new AdRequest.Builder().build());
+            mAd.loadAd(getString(R.string.test_reward_video_ad_unit_id), new AdRequest.Builder().build());
         }
     }
 

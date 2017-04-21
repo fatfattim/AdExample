@@ -14,10 +14,8 @@ import com.google.android.gms.ads.VideoOptions;
 public class NativeExpressActivity extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName();
 
-    NativeExpressAdView mAdView;
-    VideoController mVideoController;
-    private static final String APP_ID = "ca-app-pub-2381280723291292~5021041766";
-
+    private NativeExpressAdView mAdView;
+    private VideoController mVideoController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

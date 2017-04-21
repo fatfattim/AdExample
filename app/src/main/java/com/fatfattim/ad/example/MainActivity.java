@@ -2,7 +2,6 @@ package com.fatfattim.ad.example;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -152,8 +151,4 @@ public class MainActivity extends AppCompatActivity {
     }
     // [END add_lifecycle_methods]
 
-    @VisibleForTesting
-    AdView getAdView() {
-        return mAdView;
-    }
 }
